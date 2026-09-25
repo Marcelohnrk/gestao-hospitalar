@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Consultas e Exames</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Agenda de Consultas e Exames</h1>
+    <form id="form-agendamento">
+    <label for="nome-paciente">Nome do paciente:</label>
+    <input type="text" id="nome-paciente" name="nome-paciente" required>
+
+    <label for="data-agendamento">Data:</label>
+    <input type="date" id="data-agendamento" name="data-agendamento" required>
+
+    <label for="tipo-agendamento">Tipo:</label>
+    <select id="tipo-agendamento" name="tipo-agendamento" required>
+        <option value="">Selecione</option>
+        <option value="consulta">Consulta</option>
+        <option value="exame">Exame</option>
+    </select>
+
+    <label for="medico">Médico:</label>
+    <input type="text" id="medico" name="medico" required>
+
+    <button type="submit">Agendar</button>
+   </form>
+   <h2>Agendamentos marcados</h2>
+<ul id="lista-agendamentos">
+    <!-- os agendamentos vão aparecer aqui via JavaScript -->
+</ul>
+</body>
+</html>
