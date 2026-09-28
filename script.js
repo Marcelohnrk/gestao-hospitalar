@@ -30,9 +30,23 @@ form.addEventListener("submit", function (event) {
 function exibirAgendamentos() {
     lista.innerHTML = "";
 
-    agendamentos.forEach(function (agendamento) {
+    agendamentos.forEach(function (agendamento, index) {
         const item = document.createElement("li");
-        item.textContent = agendamento.nome + " - " + agendamento.data + " - " + agendamento.tipo + " - " + agendamento.medico;
+        item.textContent = agendamento.nome + " - " + agendamento.data + " - " + agendamento.tipo + " - " + agendamento.medico + " ";
+
+        const botaoCancelar = document.createElement("button");
+        botaoCancelar.textContent = "Cancelar";
+        botaoCancelar.addEventListener("click", function () {
+            removerAgendamento(index);
+        });
+
+        item.appendChild(botaoCancelar);
         lista.appendChild(item);
     });
+}
+
+function removerAgendamento(index) {
+    agendamentos.splice(index, 1);
+    localStorage.setItem("agendamentos", JSON.stringify(agendamentos));
+    exibirAgendamentos();
 }
