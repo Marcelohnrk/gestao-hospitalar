@@ -10,8 +10,7 @@
     <h1>Agenda de Consultas e Exames</h1>
     <form id="form-agendamento">
     <label for="nome-paciente">Nome do paciente:</label>
-    <input type="text" id="nome-paciente" name="nome-paciente" required>
-
+    <input type="text" id="nome-paciente" name="nome-paciente" placeholder="Ex: Maria da Silva" required>
     <label for="data-agendamento">Data:</label>
     <input type="date" id="data-agendamento" name="data-agendamento" required>
 
@@ -23,13 +22,16 @@
     </select>
 
     <label for="medico">Médico:</label>
-    <input type="text" id="medico" name="medico" required>
+    <input type="text" id="medico" name="medico" placeholder="Ex: Dr. João Souza" required>
 
     <button type="submit">Agendar</button>
    </form>
    <h2>Agendamentos marcados</h2>
 <ul id="lista-agendamentos">
 </ul>
+<footer>
+    <p>Projeto de estudo: Agenda de Consultas e Exames</p>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>

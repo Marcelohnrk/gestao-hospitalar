@@ -10,6 +10,14 @@ body {
     color: #fffdfd;
     padding: 30px;
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding-top: 20px;
 }
 
 
