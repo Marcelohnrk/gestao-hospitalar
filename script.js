@@ -52,7 +52,7 @@ function exibirAgendamentos(listaParaExibir = agendamentos) {
         item.textContent = agendamento.nome + " - " + formatarData(agendamento.data) + " - " + agendamento.tipo + " - " + agendamento.medico + " ";
 
         const botaoCancelar = document.createElement("button");
-        botaoCancelar.textContent = "Cancelar";
+        botaoCancelar.textContent = "❌Cancelar";
         botaoCancelar.addEventListener("click", function () {
             removerAgendamento(index);
         });
