@@ -31,7 +31,6 @@ form {
     margin-bottom: 24px;
     color: #333;
 }
-}
 
 label {
     font-weight: bold;
@@ -84,8 +83,10 @@ li {
     border-radius: 6px;
     margin-bottom: 8px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    word-wrap: break-word;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     color: #333;
     animation: fadeIn 0.3s ease;
@@ -113,3 +114,31 @@ li button:hover {
     }
 }
 
+form,
+ul{
+    width: 100%;
+}
+
+input,
+select,
+button{
+    min-height: 44px;
+}
+@media (max-width: 600px) {
+    body {
+        padding: 16px;
+        font-size: 16px;
+    }
+    form {
+        padding: 16px;
+    }
+}
+@media (min-width: 601px) {
+    li {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+    

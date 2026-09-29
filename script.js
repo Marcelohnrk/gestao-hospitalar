@@ -49,7 +49,8 @@ function exibirAgendamentos(listaParaExibir = agendamentos) {
         const index = agendamentos.indexOf(agendamento);
 
         const item = document.createElement("li");
-        item.textContent = agendamento.nome + " - " + formatarData(agendamento.data) + " - " + agendamento.tipo + " - " + agendamento.medico + " ";
+        const Texto = document.createElement("span");
+        Texto.textContent = agendamento.nome + " - " + formatarData(agendamento.data) + " - " + agendamento.tipo + " - " + agendamento.medico + " ";
 
         const botaoCancelar = document.createElement("button");
         botaoCancelar.textContent = "❌Cancelar";
@@ -57,6 +58,7 @@ function exibirAgendamentos(listaParaExibir = agendamentos) {
             removerAgendamento(index);
         });
 
+        item.appendChild(Texto);
         item.appendChild(botaoCancelar);
         lista.appendChild(item);
     });
